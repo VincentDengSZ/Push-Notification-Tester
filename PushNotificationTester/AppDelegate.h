@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SRVApplicationDelegate.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : SRVApplicationDelegate <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

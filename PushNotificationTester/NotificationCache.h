@@ -14,4 +14,6 @@
 
 - (NSArray*)arrayOfAllNotifications;
 
+- (void)clear;
+
 @end

@@ -1,0 +1,3 @@
+[submodule "ExternalLibs/IsaacsIOSLibrary"]
+	path = ExternalLibs/IsaacsIOSLibrary
+	url = https://github.com/izackp/Isaacs-IOS-Library.git

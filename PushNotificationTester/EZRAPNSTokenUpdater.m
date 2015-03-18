@@ -40,19 +40,11 @@
     
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter postNotificationName:@"registerForRemote" object:hexToken];
-    
-#ifndef DEBUG
-#if !(TARGET_IPHONE_SIMULATOR)
-    NSDictionary *params = @{@"notification_token": hexToken};
-    
-    [[ServerWrapper sharedInstance] patchObjectWithPath:@"accounts/update" parameters:params success:nil failure:nil];
-#endif
-#endif
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    [defaultCenter postNotificationName:@"registerForRemote" object:nil];
+    [defaultCenter postNotificationName:@"registerForRemote" object:[error localizedDescription]];
     [UIAlertView showError:error];
 }
 
@@ -114,8 +106,6 @@
 }
 
 - (void)handlePush:(NSDictionary*)userInfo userDidTap:(bool)didTap {
-    if (didTap == false)
-        return;
     
     if (self.userTappedPushNotificationCallBack == nil)
     {
@@ -125,7 +115,8 @@
     
     NSMutableDictionary* mutUserInfo = [userInfo mutableCopy];
     [mutUserInfo setObject:@(didTap) forKey:@"didTap"];
-    
+    [mutUserInfo setObject:[NSDate date] forKey:@"receivedDate"];
+  
     NSDictionary* final = [NSDictionary dictionaryWithDictionary:mutUserInfo];
     self.userTappedPushNotificationCallBack(final);
 }
