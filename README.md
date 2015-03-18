@@ -56,6 +56,7 @@ At this point, verify you have the correct provisioning files set in in your bui
  - Download and run https://github.com/blommegard/APNS-Pusher
  - Run the Push Notification Tester on a device
  - In APNS pusher, select the push notification certificate you have created in the previous section (Generating Push Certificates)
+   - If you're running debug build you want to select the sandbox (or development) certificate otherwise you should use the production certificate.
  - If your phone and the APNS Pusher app is on the same network you will see your phones name in the dropdown menu. Double click this menu and you will see your token automatically filled in.
     - if you do not see your phone you will have to enter your token manually
  - Press push and you're done!
