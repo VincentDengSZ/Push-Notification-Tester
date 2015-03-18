@@ -17,9 +17,9 @@ git submodule update --init --recursive
 pod install
 ```
 
-Open the PushNotificationTester.xcworkspace file in xcode. Then follow the *Building to a Device* and *Making this project use your provisioning Files* sections.
+Open the PushNotificationTester.xcworkspace file in xcode. Then follow the *Building to a device* and *Making this project use your provisioning files* sections.
 
-##### Building to a Device:
+##### Building to a device:
 Follow these instructions: http://code.tutsplus.com/tutorials/how-to-test-your-app-on-an-ios-device--mobile-13861
 
 In order to build to the device make sure you have:
@@ -30,7 +30,7 @@ In order to build to the device make sure you have:
  - Dev and Distribution Provisioning Files
     - You may have to download and install these (doubleclick). There is a method to sync them through xcode's account settings in preferences, but it doesn't always work.
 
-##### Making this project use your provisioning Files:
+##### Making this project use your provisioning files:
 - Open PushNotificationTester.xcworkspace in xcode
 - Go to `Info.plist`
 - Set the bundle id property to the App ID you have created (com.company.pushnotificationtester)
@@ -39,7 +39,7 @@ In order to build to the device make sure you have:
 - Right below, Set the provisioning files to the ones you have created
 - You should be able to build and run to the device. If you have not enabled push notifications for your App ID you will see related errors.
 
-##### Generating Push Certificates
+##### Generating push certificates
  - Go to https://developer.apple.com
  - Go to your App Id (com.company.pushnotificationtester)
  - Enable push notifications
@@ -52,7 +52,7 @@ In order to build to the device make sure you have:
 
 At this point, verify you have the correct provisioning files set in in your build settings. Then you should be able to build to a device and receive a push notification token.
 
-##### Sending A Push Notification
+##### Sending a push notification
  - Download and run https://github.com/blommegard/APNS-Pusher
  - Run the Push Notification Tester on a device
  - In APNS pusher, select the push notification certificate you have created in the previous section (Generating Push Certificates)
