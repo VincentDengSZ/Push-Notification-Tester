@@ -1,5 +1,5 @@
 ### Push Notification Tester
-This app will give you a push notification token as well as record push notifications sent to the device.
+This app will give you a push notification token as well as record push notifications sent to the device. It will also broad cast your push notification token soit can be used with APNS pusher (https://github.com/blommegard/APNS-Pusher).
 
 ![Alt text](screenshot.png?raw=true "Screenshot")
 
