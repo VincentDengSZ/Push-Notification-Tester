@@ -1,5 +1,5 @@
 ### Push Notification Tester
-This app will give you your push notification token as well as record push notifications sent to the device.
+This app will give you a push notification token as well as record push notifications sent to the device.
 
 ![Alt text](screenshot.png?raw=true "Screenshot")
 
