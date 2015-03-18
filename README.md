@@ -39,7 +39,7 @@ In order to build to the device make sure you have:
 - Right below, Set the provisioning files to the ones you have created
 - You should be able to build and run to the device. If you have not enabled push notifications for your App ID you will see related errors.
 
-##### Generating push certificates
+##### Generating push certificates:
  - Go to https://developer.apple.com
  - Go to your App Id (com.company.pushnotificationtester)
  - Enable push notifications
@@ -52,7 +52,7 @@ In order to build to the device make sure you have:
 
 At this point, verify you have the correct provisioning files set in in your build settings. Then you should be able to build to a device and receive a push notification token.
 
-##### Sending a push notification
+##### Sending a push notification:
  - Download and run https://github.com/blommegard/APNS-Pusher
  - Run the Push Notification Tester on a device
  - In APNS pusher, select the push notification certificate you have created in the previous section (Generating Push Certificates)
